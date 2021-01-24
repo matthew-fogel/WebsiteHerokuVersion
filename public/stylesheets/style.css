@@ -1,11 +1,21 @@
 body {
   padding: 50px;
   color: white;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px "Georgia", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
+}
+
+.navbar{
+  background-color:darkblue;
+  padding-top:0.05rem;
+  padding-bottom:0.05rem;
+  padding-left:1rem;
+  padding-right:1rem;
+  color:white;
+  border-radius:5px;
 }
 
 body {
