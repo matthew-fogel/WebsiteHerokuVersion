@@ -10,16 +10,20 @@ a {
 
 .navbar{
   background-color:darkblue;
-  padding-top:0.05rem;
-  padding-bottom:0.05rem;
-  padding-left:1rem;
-  padding-right:1rem;
-  color:white;
   border-radius:5px;
+}
+
+.navbar-brand{
+  color:lightblue
+}
+
+.credits{
+  color:white;
 }
 
 body {
   background: #030303;
+  color:white;
   background-image: url("../images/city_lights_namerica_8k.jpg");
   background-repeat: no-repeat;
   background-size:cover;

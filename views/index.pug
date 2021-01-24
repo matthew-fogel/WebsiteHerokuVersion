@@ -1,11 +1,22 @@
 extends layout
 
 block content
-  nav.navbar.navbar-expand-md
-    h1.navbar-brand Pandemic Tracker
-    ul
-      li
-        a.nav-link(href="https://awesomeopensource.com/project/ExpDev07/coronavirus-tracker-api")
-          | API
-  p Image Credit: NASA
-  p API Credit: AwesomeOpenSource.com
+  nav.navbar.navbar-expand-md.navbar-dark
+    h.navbar-brand Pandemic Tracker
+    button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarItems', aria-controls='navbarItems', aria-expanded='false', aria-label='Toggle menu')
+      span.navbar-toggler-icon
+    #navbarItems.collapse.navbar-collapse
+      ul.navbar-nav.mr-auto
+        li.nav-item.active
+          a.nav-link(href="https://awesomeopensource.com/project/ExpDev07/coronavirus-tracker-api")
+            | External API Docs
+      ul.navbar-nav.mr-auto
+        li.nav-item.active
+          a.nav-link(href="https://github.com/ExpDev07/coronavirus-tracker-api")
+            | External API Git Repository
+      ul.navbar-nav.mr-auto
+        li.nav-item.active
+          a.nav-link(href="https://www.canada.ca/en/public-health/services/diseases/2019-novel-coronavirus-infection/health-professionals.html")
+            | Canada Covid-19 Information
+  .credits
+    p Image Credit: NASA; API Credit: AwesomeOpenSource.com
