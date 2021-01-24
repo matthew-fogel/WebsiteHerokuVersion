@@ -1,8 +1,16 @@
 body {
   padding: 50px;
+  color: white;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
+}
+
+body {
+  background: #030303;
+  background-image: url("../images/city_lights_namerica_8k.jpg");
+  background-repeat: no-repeat;
+  background-size:cover;
 }
