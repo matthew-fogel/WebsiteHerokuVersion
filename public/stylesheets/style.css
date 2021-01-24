@@ -14,7 +14,8 @@ a {
 }
 
 .navbar-brand{
-  color:lightblue
+  color:lightblue;
+  font-family:Georgia;
 }
 
 .credits{
