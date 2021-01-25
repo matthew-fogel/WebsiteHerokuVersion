@@ -1,7 +1,6 @@
 body {
-  padding: 50px;
-  color: white;
-  font: 14px "Georgia", Helvetica, Arial, sans-serif;
+  background: white;
+  color:white;
 }
 
 a {
@@ -33,10 +32,11 @@ a {
   color:white;
 }
 
-body {
-  background: #030303;
-  color:white;
-  background-image: url("../images/city_lights_namerica_8k.jpg");
-  background-repeat: no-repeat;
-  background-size:cover;
+.carousel-inner {
+  width: 100%;
+}
+
+.container { 
+  max-width: 1200px;
+  margin: 4% auto;
 }

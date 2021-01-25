@@ -1,0 +1,16 @@
+mixin nav
+  nav.navbar.navbar-expand-md.navbar-dark
+    h.navbar-brand Matthew Fogel, B.C.Sc.
+    button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarItems', aria-controls='navbarItems', aria-expanded='false', aria-label='Toggle menu')
+      span.navbar-toggler-icon
+    #navbarItems.collapse.navbar-collapse
+      ul.navbar-nav.mr-auto
+        li.nav-item.active
+          a.nav-link(href="#")
+            | Home
+        li.nav-item.active
+          a.nav-link(href="https://www.linkedin.com/in/matthew-fogel-3a170b148/")
+            | LinkedIn
+        li.nav-item.active
+          a.nav-link(href="https://github.com/matthew-fogel/")
+            | GitHub
