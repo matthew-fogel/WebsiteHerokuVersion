@@ -8,14 +8,25 @@ a {
   color: #00B7FF;
 }
 
-.navbar{
-  background-color:darkblue;
-  border-radius:5px;
+.navbar {
+  background-color: #191970;
+  color: #FFFFFF;
+  margin: auto;
+ -webkit-border-radius: 0;
+ -moz-border-radius: 0;
+ border-radius: 0;
+}
+.navbar-brand {
+  font-family: Garamond;
+  font-size: 1.3em;
+  padding: 10px 10px;
+  display: inline-block;
+  vertical-align: middle;
+  color: #ADD8E6
 }
 
-.navbar-brand{
-  color:lightblue;
-  font-family:Georgia;
+.nav-item {
+  color: #ADD8E6
 }
 
 .credits{
