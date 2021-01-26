@@ -1,6 +1,13 @@
+.carousel-caption {
+  position: relative !important;
+  background-color: #191970;
+  left: 0 !important;
+  top: 0;
+}
+
 .navbar {
   background-color: #191970;
-  color: #FFFFFF;
+  color: #FFFFFF; !important
   margin: auto;
  -webkit-border-radius: 0;
  -moz-border-radius: 0;
@@ -12,7 +19,7 @@
   padding: 10px 10px;
   display: inline-block;
   vertical-align: middle;
-  color: #ADD8E6
+  color: #ADD8E6;
 }
 .dropdownMenuLink {
   background-color: #191970;
@@ -30,12 +37,7 @@ footer {
 .carousel-inner {
  width: 100%;
 }
-.carousel-caption {
-  background-color: #191970;
-  position: relative;
-  left: 0;
-  top: 0;
-}
+
 .container { 
  max-width: 1200px;
  margin: 4% auto;
