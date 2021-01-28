@@ -4,7 +4,7 @@ I decided to do a rebuild of my website using Node and Express. GitHub Pages onl
 **Current website:**
 matthewfogel.ca
 
-**To Run**
+**server project run instructions**
 * open command prompt
 * cd to the directory, WebsiteRebuild/server
 * *First Time Only*: npm install.
