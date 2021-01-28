@@ -2,7 +2,7 @@
 mixin carousel
   #myCarousel.carousel.slide(data-ride="carousel", data-interval="8000")
     ol.carousel-indicators
-      li(data-target="#myCarousel", data-slide-to="0", class="active")
+      li(data-target="#myCarousel", data-slide-to="0").active
       li(data-target="#myCarousel", data-slide-to="1")
       li(data-target="#myCarousel", data-slide-to="2")
       li(data-target="#myCarousel", data-slide-to="3")
@@ -11,7 +11,7 @@ mixin carousel
       li(data-target="#myCarousel", data-slide-to="6")
       li(data-target="#myCarousel", data-slide-to="7")
       li(data-target="#myCarousel", data-slide-to="8")
-    div.carousel-inner
+    div.carousel-inner(role="listbox")
       div.carousel-item.active
         img(src="/images/crater.jpg", class="d-block w-100")
         div.carousel-caption.d-none.d-md-block
@@ -59,7 +59,7 @@ mixin carousel
           p Camera Setup: Canon EOS Rebel SL1 and 100m zoom lens.
     a.carousel-control-prev(href="#myCarousel", role="button", data-slide="prev")
       span.carousel-control-prev-icon(aria-hidden="true")
-      span.sr-only Previous
+        span.sr-only Previous
     a.carousel-control-next(href="#myCarousel", role="button", data-slide="next")
       span.carousel-control-next-icon(aria-hidden="true")
-      span.sr-only Next
+        span.sr-only Next

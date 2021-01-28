@@ -4,6 +4,9 @@ I decided to do a rebuild of my website using Node and Express. GitHub Pages onl
 **Current website:**
 matthewfogel.ca
 
+**Heroku URL**
+https://canuckwebsite.herokuapp.com/
+
 **server project run instructions**
 * open command prompt
 * cd to the directory, WebsiteRebuild/server
