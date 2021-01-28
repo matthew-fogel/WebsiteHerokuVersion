@@ -1,3 +1,5 @@
+process.env.NODE_ENV = 'production';
+
 var createError = require('http-errors');
 var express = require('express');
 var axios = require('axios')
@@ -6,8 +8,12 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
+var compression = require('compression');
+var helmet = require('helmet');
 
 var app = express();
+
+app.use(helmet());
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -18,7 +24,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-pp.use('/static', express.static(path.join(__dirname, 'images')));
+app.use('/static', express.static(path.join(__dirname, 'images')));
 
 app.use('/', indexRouter);
 

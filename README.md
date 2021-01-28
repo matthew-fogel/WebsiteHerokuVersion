@@ -8,4 +8,5 @@ matthewfogel.ca
 * open command prompt
 * cd to the directory, WebsiteRebuild/server
 * *First Time Only*: npm install.
-* npx cross-env DEBUG=nodewebsite:* npm start
+* npm start OR the below code
+    npx cross-env DEBUG=nodewebsite:* npm start
