@@ -33,7 +33,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use('/static', express.static(path.join(__dirname, 'images')));
+app.use('/static', express.static(path.join(__dirname, 'public/images')));
+app.use('/styles', express.static(path.join(__dirname, 'public/stylesheets')));
 
 app.use('/', indexRouter);
 
