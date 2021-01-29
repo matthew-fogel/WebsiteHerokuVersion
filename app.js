@@ -19,6 +19,7 @@ app.use(
       ...helmet.contentSecurityPolicy.getDefaultDirectives(),
       "style-src": ["'self'", "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"],
       "script-src": ["'self'", "code.jquery.com", "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"],
+      "font-src": ["'self'", "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"],
     },
   })
 );
