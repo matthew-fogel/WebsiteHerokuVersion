@@ -16,10 +16,11 @@ var app = express();
 app.use(
   helmet.contentSecurityPolicy({
     directives: {
-      ...helmet.contentSecurityPolicy.getDefaultDirectives(),
-      "style-src": ["'self'", "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"],
-      "script-src": ["'self'", "code.jquery.com", "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"],
-      "font-src": ["'self'", "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"],
+      "defaultSrc": ["'self'"],
+      "styleSrc": ["'self'", "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"],
+      "imgSrc": ["'self'", "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"],
+      "scriptSrc": ["'self'", "code.jquery.com", "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"],
+      "fontSrc": ["'self'", "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"],
     },
   })
 );
