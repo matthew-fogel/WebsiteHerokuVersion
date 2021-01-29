@@ -13,7 +13,15 @@ var helmet = require('helmet');
 
 var app = express();
 
-app.use(helmet());
+app.use(
+  helmet.contentSecurityPolicy({
+    directives: {
+      ...helmet.contentSecurityPolicy.getDefaultDirectives(),
+      "style-src": ["'self'", "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"],
+      "script-src": ["'self'", "code.jquery.com", "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"],
+    },
+  })
+);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
