@@ -1,20 +1,19 @@
-@import "../../node_modules/bootstrap/scss/bootstrap";
-
 .carousel-caption {
   position: relative !important;
-  background-color: hsl(240, 64%, 27%);
+  background-color: #191970;
   left: 0 !important;
   top: 0;
 }
 
-.navbar-dark {
+.navbar {
   background-color: #191970;
+  color: #FFFFFF; !important
   margin: auto;
  -webkit-border-radius: 0;
  -moz-border-radius: 0;
  border-radius: 0;
 }
-.navbar-dark .navbar-brand {
+.navbar-brand {
   font-family: Garamond;
   font-size: 1.3em;
   padding: 10px 10px;
@@ -27,10 +26,39 @@
   background-image: url("/icons/list.svg") !important;
 }
 
+.dropdownMenuLink {
+  background-color: #191970;
+}
 .nav-item {
   color: #ADD8E6
 }
+footer {
+ width: 100%;
+ background-color: #191970;
+ padding: 10px 10px;
+ color: #FFFFFF;
+ 
+}
+.carousel-inner {
+ width: 100%;
+}
 
 .container { 
+ max-width: 1200px;
  margin: 4% auto;
+}
+
+#icon {
+ max-height: 100px;
+ max-width: 100px;
+ margin: 1% 1%;
+}
+
+@media (max-width: 600px) {
+ .carousel-caption {
+   display: none;
+ }
+ .navbar-subtitle {
+   display: none;
+ }
 }
