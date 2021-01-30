@@ -1,4 +1,4 @@
-const  app = require('./app');
+const  app = require('../app');
 const request = require('supertest');
 const { it } = require('@jest/globals');
 
@@ -10,7 +10,7 @@ describe('Homepage GET', () => {
 })
 
 describe('Homepage Body defined', () => {
-    it('should contain my name', async () => {
+    it('should be defined', async () => {
       const res = await request(app).get('/');
       expect(res.text).toBeDefined();
     })
