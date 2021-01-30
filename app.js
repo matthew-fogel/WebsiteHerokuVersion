@@ -38,6 +38,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/static', express.static(path.join(__dirname, 'public/images')));
 app.use('/styles', express.static(path.join(__dirname, 'public/stylesheets')));
+app.use('/icons', express.static(path.join(__dirname, 'public/icons')));
+
 
 app.use('/', indexRouter);
 
