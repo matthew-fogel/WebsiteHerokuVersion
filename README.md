@@ -19,3 +19,23 @@ https://canuckwebsite.herokuapp.com/
 Favicon.io generated using the free generator here https://favicon.io/favicon-generator/
 
 Font - Averia Serif Libre
+
+**Bootstrap 4**
+I am using Bootstrap 4 for navigation, carousel, and other web page elements.
+
+**PUG**
+I am using the PUG template engine for compiling into HTML files.
+
+**SCSS**
+I decided to use SCSS because I can override bootstrap themes with my own stylesheet, as specified in the Bootstrap docs. For this to work, I changed by header so that the bootstrap styles and JS are coming from the local node installation rather than the bootstrap CDN.
+
+* npm install -g sass
+
+After that above command, 
+
+* sass public/scss/style.scss public/css/style.css
+
+Generates the CSS from SCSS file (as in the sass docs: https://sass-lang.com/dart-sass)
+
+These docs show how to use Bootstrap with SCSS/SASS:
+https://getbootstrap.com/docs/4.6/getting-started/theming/
