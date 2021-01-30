@@ -7,11 +7,9 @@ var axios = require('axios')
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
 var indexRouter = require('./routes/index');
 var compression = require('compression');
 var helmet = require('helmet');
-
 var app = express();
 app.use(favicon(path.join(__dirname, 'public/fonts', 'favicon.ico')))
 
@@ -35,10 +33,15 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/js', express.static(path.join(__dirname, '/node_modules/jquery/dist/')));
 app.use('/static', express.static(path.join(__dirname, 'public/images')));
-app.use('/styles', express.static(path.join(__dirname, 'public/stylesheets')));
+app.use('/scss', express.static(path.join(__dirname, 'public/scss')));
+app.use('/css', express.static(path.join(__dirname, 'public/css')));
 app.use('/icons', express.static(path.join(__dirname, 'public/icons')));
+app.use('/js', express.static(path.join(__dirname, '/node_modules/bootstrap/dist/js')))
+app.use('/css', express.static(path.join(__dirname, '/node_modules/bootstrap/dist/css')))
 
 
 app.use('/', indexRouter);
