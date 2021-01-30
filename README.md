@@ -13,3 +13,9 @@ https://canuckwebsite.herokuapp.com/
 * *First Time Only*: npm install.
 * npm start OR the below code
     npx cross-env DEBUG=nodewebsite:* npm start
+
+
+**Fonts**
+Favicon.io generated using the free generator here https://favicon.io/favicon-generator/
+
+Font - Averia Serif Libre

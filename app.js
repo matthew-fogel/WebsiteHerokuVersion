@@ -2,6 +2,7 @@ process.env.NODE_ENV = 'production';
 
 var createError = require('http-errors');
 var express = require('express');
+var favicon = require('serve-favicon')
 var axios = require('axios')
 var path = require('path');
 var cookieParser = require('cookie-parser');
@@ -12,6 +13,7 @@ var compression = require('compression');
 var helmet = require('helmet');
 
 var app = express();
+app.use(favicon(path.join(__dirname, 'public/fonts', 'favicon.ico')))
 
 app.use(
   helmet.contentSecurityPolicy({
