@@ -9,10 +9,14 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
+var creativeCornerRouter = require('./routes/creativeCorner');
+var postOneRouter = require('./routes/post1');
+var postTwoRouter = require('./routes/post2');
 var compression = require('compression');
 var helmet = require('helmet');
 
 var app = express();
+
 app.use(favicon(path.join(__dirname, 'public/fonts', 'favicon.ico')))
 
 app.use(
@@ -42,6 +46,9 @@ app.use('/icons', express.static(path.join(__dirname, 'public/icons')));
 
 
 app.use('/', indexRouter);
+app.use('/creativeCorner', creativeCornerRouter);
+app.use('/post1', postOneRouter);
+app.use('/post2', postTwoRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

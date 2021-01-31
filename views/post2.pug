@@ -1,0 +1,41 @@
+extends layout
+include mixins/_nav
+include mixins/_footer
+
+block content
+  +nav
+  div.container.text-centre
+    h2#About Creative Corner
+    h5#Date January 30, 2021
+    figure.figure
+    img(src="/static/IMG_3517.jpg", class="d-block w-100")
+    figcaption.figure-caption Image (above): Sunrise over Haleakalā, Hawaii (Canon EOS Rebel SL1, Tokina 11m Lens)
+    p
+    p "Live as if you were to die tomorrow. Learn as if you were to live forever." - Mahatma Gandhi
+  div.container.text-left
+    h3 Building My New Site
+
+    p It's not everyday that a new website emerges out of the silicon! To mark this occasion, I'm sharing my journey to creating it!
+    p My previous site was built using GitHub pages and Jekyll, and hosted via 
+      a(href='https://github.com/matthew-fogel/matthew-fogel.github.io') my GitHub account.
+    p I decided that I wanted to utilize my love for PUG template engine and clean code organization, so I rebuilt my site with Node.js and Express.
+    p One issue with the GitHub site was that images noticeably lagged while loading. Even if this becomes a problem on Heroku, my new host, the Node/npm ecosystem provides packages which may alleviate this issue. 
+
+    h3 Climbing the Dependency Ladder
+    p One of the benefits of using Node is its package management system, which allows me to build a more complex solution.
+    p While dependencies can certainly cascade into what is known as 'dependency hell', when used in moderation, they can take a static site and make it better.
+    p For example, I learned more about website security. A dependency I added, Helmet, is a middleware that prevents common attacks.
+
+    h3 Coding With A Helmet
+    p Helmet provides what is known as a Content Security Policy (CSP). I am able to specify that the app only accepts scripts or images from certain domains.
+    p When I put on the Helmet, I had to adjust how I used one of my favourite features from my previous site, Bootstrap.
+    p If you aren't familiar with Bootstrap, it is one of the most popular toolkits for reponsive web design.
+    p I was surprised to find out, after upgrading to Bootstrap 4 and including it in my Express site, that the Bootstrap SVG files used for icons like navbar toggler violate CSP.
+    p In fact, I found a very lengthy GitHub discussion between Devs and users 
+      a(href="https://github.com/twbs/bootstrap/issues/25394") on how to solve this issue.
+    p I followed the advice recommended, which is to download a custom Bootstrap icon from the open source Bootstrap library 
+      a(href="https://icons.getbootstrap.com/") here.
+    p I then replaced the default navbar toggler background image with the custom downloaded SVG. This way, the navbar toggler would properly show on mobile.
+    p The moral of the story, I find, is that putting on a helmet helps you find the bugs and holes in the road.
+
+  +footer
