@@ -22,13 +22,16 @@ block content
     p One of the benefits of using Node is its package management system, which allows me to use code created by others, similar to Python's Anaconda Cloud.
     p While dependencies can certainly cascade into what is known as 'dependency hell', when used in moderation, they can take a static site and make it better.
     p For example, I learned more about website security. A dependency I added, Helmet, is a middleware that prevents common attacks.
-    p One thing I thought about doing at the start, was learn how to add a module bundler like webpack. However, seeing that Webpack itself uses many packages, and given the small size of my site, I determined that it was not appropriate for this particular project.
+    p One thing I thought about doing, was learn how to add a module bundler like webpack. However, seeing that Webpack itself uses many packages, and given the small size of my site, I determined that it was not appropriate for this particular project.
+
+    h3 These Boots Are Made For NPM
+    p If you aren't familiar with Bootstrap, it is one of the most popular toolkits for reponsive web design.
+    p I considered switching over to using SASS or SCSS to generate the CSS for my site, since Bootstrap custom theming naturally integrates with SCSS. Currently, I use important tags to override some of Bootstrap's themes.
+    p However, since I only have about 60 lines of CSS, I ultimately realized this wouldn't make sense for such a small project. Integrating Bootstrap with SCSS and NPM would also require adding Bootstrap as an NPM package, which is cool, but I can simply include the CDN links in my HTML header.
 
     h3 Coding With A Helmet
     p Helmet provides what is known as a Content Security Policy (CSP). I am able to specify that the app only accepts scripts or images from certain domains.
-    p When I put on the Helmet, I had to adjust how I used one of my favourite features from my previous site, Bootstrap.
-    p If you aren't familiar with Bootstrap, it is one of the most popular toolkits for reponsive web design.
-    p I was surprised to find out, after upgrading to Bootstrap 4 and including it in my Express site, that the Bootstrap SVG files used for icons like navbar toggler violate CSP.
+    p When I put on the Helmet, I had to adjust how I used one of my favourite features from my previous site, Bootstrap.    p I was surprised to find out, after upgrading to Bootstrap 4 and including it in my Express site, that the Bootstrap SVG files used for icons like navbar toggler violate CSP.
     p In fact, I found a very lengthy GitHub discussion between Devs and users 
       a(href="https://github.com/twbs/bootstrap/issues/25394") on how to solve this issue.
     p I followed the advice recommended, which is to download a custom Bootstrap icon from the open source Bootstrap library 
