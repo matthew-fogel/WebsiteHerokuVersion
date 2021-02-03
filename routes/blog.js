@@ -1,9 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
+/* GET blog page. */
 router.get('/', function(req, res, next) {
-  res.render('creativeCorner', { title: 'Matthew Fogel'});
+  res.render('blog', { title: 'Matthew Fogel'});
 });
 
 module.exports = router;

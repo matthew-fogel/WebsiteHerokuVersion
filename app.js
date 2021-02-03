@@ -9,7 +9,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
-var creativeCornerRouter = require('./routes/creativeCorner');
+var blogRouter = require('./routes/blog');
 var postOneRouter = require('./routes/post1');
 var postTwoRouter = require('./routes/post2');
 var compression = require('compression');
@@ -46,7 +46,7 @@ app.use('/icons', express.static(path.join(__dirname, 'public/icons')));
 
 
 app.use('/', indexRouter);
-app.use('/creativeCorner', creativeCornerRouter);
+app.use('/blog', blogRouter);
 app.use('/post1', postOneRouter);
 app.use('/post2', postTwoRouter);
 
