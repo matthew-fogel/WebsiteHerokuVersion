@@ -5,6 +5,10 @@ include mixins/_blogHeader
 
 block content
   +nav
+  .nav(aria-label="breadcrumb")
+    ol.breadcrumb
+      li.breadcrumb-item.active
+        a(aria-current="page") Blog Home
   +blogHeader
   div.container.text-left
     a(href="/post2") Building My New Site
