@@ -22,6 +22,10 @@
   color: #ADD8E6;
 }
 
+.navbar-dark .navbar-toggler-icon {
+  background-image: url("/icons/list.svg") !important;
+}
+
 .carousel-control-prev-icon {
   background-image: url("/icons/chevron-left.svg") !important;
   background-color: white !important;
