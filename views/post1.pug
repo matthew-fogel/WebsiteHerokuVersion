@@ -5,27 +5,34 @@ include mixins/_blogHeader
 
 block content
   +nav
-  +blogHeader
+  .nav(aria-label="breadcrumb")
+    ol.breadcrumb
+      li.breadcrumb-item
+        a(href="/Blog") Blog Home
+      li.breadcrumb-item.active
+        a(aria-current="page") January 30, 2021
   div.container.text-left
-    h3 Forever Learning
+    h1.display-4 Forever Learning
     figure.figure
-    img(src="/static/wordcloud.jpg", class="d-block w-100")
-    figcaption.figure-caption Image (above): Generated using wordcloud.com, and Wikipedia page "Comparison of Programming languages"
-    p Have you ever stopped to think how amazing it is what we can do with technology? How many programming languages have been built over the past dozen or so years? How many frameworks and libraries can you find on GitHub?
+      img(src="/static/wordcloud.jpg", class="d-block w-100")
+      figcaption.figure-caption Image (above): Generated using wordcloud.com, and Wikipedia page "Comparison of Programming languages"
+    p.lead Have you ever stopped to think how amazing it is what we can do with technology? How many programming languages have been built over the past dozen or so years? How many frameworks and libraries can you find on GitHub?
     p When I stop to contemplate this, it amazes me. At the same time, it's easy to be intimidated by all that you don't know! So we need to remind ourselves that not knowing everything at first is okay! 
     p You may have seen, scattered across my website, some of my portfolio of astrophotography. Just like computer programming, there are many things to learn in that subject too!
     p If you think about it, any new subject you want to learn presents an artificial edifice - an array of words that are unfamiliar to you. When grouped together, they provide a formadible obstacle to you. You might know this as "imposter syndrome."
     p But you can breach this barrier, and reach the other side. Just remember to be patient with yourself, and don't feel the need to rush your learning!
     figure.figure
-    img(src="/static/wordcloud_telescopes.jpg", class="d-block w-100")
-    figcaption.figure-caption Image (above): Generated using wordcloud.com, and Wikipedia page "Optical telescope"
+      img(src="/static/wordcloud_telescopes.jpg", class="d-block w-100")
+      figcaption.figure-caption Image (above): Generated using wordcloud.com, and Wikipedia page "Optical telescope"
+
+    h1.display-6 Code Monkey to Ground Control
     p When I first started dabbling in amateur astronomy, I opened up a copy of the Royal Astronomy of Canada Observer's Handbook. Inside, I felt like I was in outer space.
     p Collimation! Precession. Planetary Occultations. Oh my!
     p I could have closed the book, got intimidated, and decided to follow another pursuit. But I stuck with it.
     p The key is to realize that you don't have to know everything. You start with the fundamentals. For me, that involved learning some of the major constellations, spotting the planets with binoculars, and trying some night sky photographs with a camera on tripod setup.
     p All the while, I was educating myself on my new hobby. I read astronomy tips online to understand what I can expect to see in the night sky, and the advantages and disadvantages of different telescopes. Local astronomy groups provided sessions open to the public where I learned more about my hobby.
     p Before getting a telescope, I set realistic goals for what I wanted to do. In the city, light pollution is still a concern, but all the brightest planets are visible clearly, even to the naked eye.
-    p After learning about star alignment settings on my scope, and being patient for clear skies, I set out to track the planets. Since I started out, I have seen Mercury, Venus, Mars, Jupiter, and Saturn! And placing my camera against the eyepiece, I learned to capture some photos of the planets.
+    p After learning about star alignment settings on my scope, and being patient for clear skies, I set out to track the planets. Since I started out, I have seen Mercury, Venus, Mars, Jupiter, Saturn, and the Sun (with proper protection)! And placing my camera against the eyepiece, I learned to capture some photos of the planets.
     p Do I still have much to learn? Yes! But every little piece of progress excites me. When I first saw Jupiter's moons, I gasped. It was hard to believe they were real.
     p On the other side of your learning is a place where you can reach out and explore. So just remember, take care and enjoy the journey. The only destination you need to set is the next star.
 
