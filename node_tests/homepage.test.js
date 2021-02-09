@@ -19,6 +19,6 @@ describe('Homepage Body defined', () => {
 describe('Homepage Body content', () => {
     it('should contain my name', async () => {
       const res = await request(app).get('/');
-      expect(res.text).toContain('Matthew Fogel');
+      expect(res.text).toContain('Matthew Fogel, B.C.Sc.');
     })
 })
