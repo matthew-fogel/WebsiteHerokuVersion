@@ -9,8 +9,6 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
-var blogRouter = require('./routes/blog');
-var blogPostRouter = require('./routes/posts');
 var compression = require('compression');
 var helmet = require('helmet');
 
@@ -45,8 +43,6 @@ app.use('/icons', express.static(path.join(__dirname, 'public/icons')));
 
 
 app.use('/', indexRouter);
-app.use('/blog', blogRouter);
-app.use('/', blogPostRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
