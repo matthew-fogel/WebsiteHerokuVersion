@@ -1,0 +1,55 @@
+extends ../layout
+include ../mixins/_nav
+include ../mixins/_footer
+include ../mixins/_blogHeader
+
+block content
+  +nav
+  .nav(aria-label="breadcrumb")
+    ol.breadcrumb
+      li.breadcrumb-item
+        a(href="/Blog") Blog Home
+      li.breadcrumb-item.active
+        a(aria-current="page") March 8, 2021
+  div.container.text-left
+    h1.display-4 Adding An SSD To My Windows 10 PC
+
+    p.lead I embarked upon a really fun project a few weeks ago to make a long overdue upgrade to my PC. I hope you find some of my insights useful for your own personal computer upgrades.
+    p My personal desktop computer that I use for gaming and programming, a Dell XPS 8930, has served me well over the years. One reason I chose this computer was that it was easily upgradeable. I had never done any sort of PC builds before, but I have known for some time that my Hard Disk Drive (HDD) is getting long in the teeth. It was time to add an SSD as the main boot drive.
+    p Some considerations one should make when considering purchasing an SSD is the space you will need and the expansion capabilities of your PC. For me, my PC had one extra hard drive bay which could be used for a SATA-style drive, and a spot on the board for an m.2. SSD. The m.2 SSD spot was taken by Intel Optane Memory which came with the PC, which supports the HDD. I didn't want to disconnect the old hardware before ensuring the SSD functioned, so a SATA SSD was the right choice for me.
+    p For anyone who is familiar with computer design, disk drives can be thought of at a high-level as connected by data cables. A data cable can be used to connect SATA drives to the motherboard. The drive also requires a power cable, which was available for me in the 8930 unit.
+    p I was excited to upgrade to an SSD and get the faster drive speeds, which would save me from having to wait for lengthy times for programs like Discord, Chrome, and Firefox to open. Even typing into the Windows search bar had become incredibly slow after boot. It was time for a new beginning.
+
+    h1.display-6 Backup
+    p The first thing you should do before starting a computer upgrade is backing up your current drive. If you don't know how to do this, in the Cortana search bar, type "Backup Settings". In the Window that opens, click "Go to Backup and Restore (Windows 7)" rather than the first option presented to you, which is for dynamically backing up files. In these Window 7 options you can create a system image, a snapshot of your system during the time of backup. This can come handy if your drive gets corrupted and you need to reinstall. There is also an option to create a system repair disk. Fortunately, I didn't need to restore any of my backups, but it's worth reading some information online about the different Windows backup and restore features. 
+
+    h1.display-6 Components to Add 
+    p For my SSD installation, I followed this 
+      a(href="https://www.youtube.com/watch?v=2Srk4P3lasg") Youtube video.
+    p The author talked about some of the specifics of my PC and guided through the installation of different components. He recommended using a SATA SSD and a mounting bracket to add the 2.5" SSD the 3.5" hard drive tray. I read that a mounting bracket wasn't necessary for my unit, as there were screw holes for the 2.5" SATA drive to fit in the hard drive tray. I couldn't find where these holes are when I opened up my unit, so I decided to go with the mounting bracket approach. I also felt more comfortable having the SSD secured to a mounting bracket.
+    p The specific hardware components I used were slightly different than in the video. I used a Samsung SSD 870 QVO, and a Corsair Solid State Drive mounting bracket. The Samsung SSDs seemed to have good reviews and the latest version came with multiple storage size options.
+    p I also acquired a right angle SATA cable. The right-angle cables are useful for fitting cables into tight spaces under the case. Unfortunately, it turns out that for my unit a regular cable would have fitted better. Fortunately, I was able to mount my mounting bracket into different holes on the hard drive bay, elevating the drive so that the SATA cable could reach the SSD.
+
+    h1.display-6 Advice for Working inside your PC
+    p One thing to note when working with a computer is to follow the device manufacturer's guide before opening. For me, I made sure to unplug all external peripherals, and cables (including power), before working inside the case. I also pressed the power button for the recommended 5 seconds after unplugging everything, to ensure that no charge was left on the board.
+    p Also be sure to keep a clear work space. If you have a chair with wheels on each leg, it would be a good idea to move it far away from the PC, as well as any other objects that could provide an obstruction. Also be conscious of where you put your tools. For me, this meant making sure that the screws for the mountain bracket were stored safely until I was ready to install them.
+
+    h1.display-6 Cloning the old HDD to the new SSD
+    p This part surprisingly turned out to be most difficult. Multiple guides I found online recommended using the AOMEI Backupper Standard software to clone the HDD drive to the newly installed SSD. I got an error during the disk cloning process, which afterwards led me to defragment my disk and run the windows chkdisk utility to clean up bad sectors.
+    p To use this software, I followed a guide from 
+      a(href="https://www.pcmag.com/how-to/how-to-copy-your-windows-installation-to-an-ssd") PCMag.com.
+    p I used the "Create and Format Hard Disk Partitions" tool, accessible via Cortana search box, to ensure that my added drive showed up in Windows. This tool is otherwise known as "Disk Management". It can tell you how much space is on each drive, and it allows you to reassign drive letters.
+    p After completing the chkdisk procedure, which took several hours, I tried cloning the drive again, and it was successful!
+
+    h1.display-6 Changing the Default Boot Options 
+    p In Windows 10 there are two boot options, UEFI and BIOS. My PC was set to use UEFI. The specifics of how to change the boot order will differ depending on your PC, but knowing how to do this is important so that your computer boots to the drive you want. I had to press F12 when the Windows logo appeared to access the UEFI settings.
+    p I was surprised to see after entering the UEFI that there was no label for my second disk drive (the SSD) in the boot order section of UEFI. The default option listed was Windows Boot Manager, which I understood referenced my HDD after testing by booting to it.
+    p After Googling how to add a drive to the boot order list, I learned about a Windows utility, 
+      a(href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/bootcfg") bootcfg.
+    p This utility can be used to copy the files needed for boot to a new drive.
+    p After running this command in Command Prompt (elevated with Administrator privelages) and restarting a few more times, I successfully reentered UEFI and changed the boot order so that my new SSD loaded first! 
+    p When Windows started behaving much faster, I knew that my work had paid off and that I was booting to the SSD drive rather than the HDD.
+
+    p I hope you've enjoyed reading about my computer upgrade. Good luck on your own upgrades!
+
+  +footer
